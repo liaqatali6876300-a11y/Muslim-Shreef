@@ -1,0 +1,6 @@
+{
+  "name": "Sahih Muslim Sharif",
+  "description": "Complete A-to-Z encyclopedic reference, 7-volume 54-book catalog, and bilingual Arabic-Urdu Hadith reader for Sahih Muslim by Imam Muslim bin Hajjaj Al-Nishapuri.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

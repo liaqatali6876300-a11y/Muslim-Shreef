@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Cinzel', Georgia, serif;
+    --font-sans-ui: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-arabic: 'Amiri', 'Cairo', serif;
+    --font-urdu: 'Noto Nastaliq Urdu', 'Cairo', serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans-ui);
+    font-weight: 800;
+    transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  h1, h2, h3 {
+    font-weight: 900;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 0.7px currentColor;
+  }
+
+  p, dd, dt, button, a, label, select, input {
+    font-weight: 800;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 0.38px currentColor;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 0.75px currentColor;
+}
+
+.font-ui {
+  font-family: var(--font-sans-ui);
+  font-weight: 800;
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+  font-weight: 700;
+  line-height: 2.05;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 0.6px currentColor;
+}
+
+.font-urdu {
+  font-family: var(--font-urdu);
+  font-weight: 700;
+  line-height: 2.35;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 0.6px currentColor;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
